@@ -1,5 +1,5 @@
 <?php
-use app\components\helpers\ViewTypesHelper;
+use awajox\yii2base\helpers\ViewTypesHelper;
 
 $icons = [
     ViewTypesHelper::VIEW_TYPE_LIST => 'fa fa-fw fa-list',
