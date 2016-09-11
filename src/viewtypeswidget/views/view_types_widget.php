@@ -1,5 +1,5 @@
 <?php
-use awajox\yii2base\helpers\ViewTypesHelper;
+use wajox\yii2base\helpers\ViewTypesHelper;
 
 $icons = [
     ViewTypesHelper::VIEW_TYPE_LIST => 'fa fa-fw fa-list',
