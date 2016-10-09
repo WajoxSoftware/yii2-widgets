@@ -26,15 +26,15 @@ $user = \Yii::$app->user->identity;
       </p>
 	  	<p class="email"><?= \Yii::$app->user->identity->email ?></p>
 
-      <a href="<?= Url::toRoute(['/profile/user-contacts']) ?>" class="options">
+      <a href="<?= Url::toRoute(['/account/user-contacts']) ?>" class="options">
         <i class="fa fa-book fa-fw"></i> <?= $user->contactsCount ?>
       </a>&nbsp;
 
-      <a href="<?= Url::toRoute(['/profile/dialogs']) ?>" class="options">
+      <a href="<?= Url::toRoute(['/account/dialogs']) ?>" class="options">
         <i class="fa fa-envelope-o fa-fw"></i> <?= $user->newInboxMessagesCount ?>
       </a>&nbsp;
 
-      <a href="<?= Url::toRoute(['/profile/bills']) ?>" class="options">
+      <a href="<?= Url::toRoute(['/account/bills']) ?>" class="options">
         <i class="fa fa-credit-card fa-fw"></i> <?= $user->accountBalanceRUR ?> P
       </a>&nbsp;
   	</div>
