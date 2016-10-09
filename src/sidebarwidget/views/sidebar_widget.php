@@ -12,13 +12,13 @@ $user = \Yii::$app->user->identity;
   <div class="clr"></div>
   <div class="sidebar-user">
   	<div class="thumbnail avatar">
-  		<a href="<?= Url::toRoute(['/account']) ?>">
+  		<a href="<?= Url::toRoute(['/account/account']) ?>">
         <img src="<?= \Yii::$app->user->identity->avatarUrl ?>"/>
       </a>
   	</div>
   	<div class="info">
 	  	<p class="name">
-        <a href="<?= Url::toRoute(['/account']) ?>"><?= \Yii::$app->user->identity->name ?></a>
+        <a href="<?= Url::toRoute(['/account/account']) ?>"><?= \Yii::$app->user->identity->name ?></a>
 
         <a href="<?= Url::toRoute(['/account/settings']) ?>" class="edit">
           <i class="fa fa-gears fa-fw"></i>
