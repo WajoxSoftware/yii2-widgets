@@ -6,6 +6,7 @@ use yii\base\Widget;
 
 class PageControlsWidget extends Widget
 {
+    public $viewFilePath = 'page_controls_widget';
     public $items = [];
     public $dropDownMode = false;
 
@@ -16,7 +17,7 @@ class PageControlsWidget extends Widget
 
     public function run()
     {
-        return $this->render('page_controls_widget', [
+        return $this->render($viewViewFilePath, [
             'items' => $this->items,
             'dropDownMode' => $this->dropDownMode,
         ]);

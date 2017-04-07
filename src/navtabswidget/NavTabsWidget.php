@@ -6,6 +6,7 @@ use yii\base\Widget;
 
 class NavTabsWidget extends Widget
 {
+    public $viewFilePath = 'nav_tabs_widget';
     public $items = [];
     public $current = null;
     public function init()
@@ -15,7 +16,7 @@ class NavTabsWidget extends Widget
 
     public function run()
     {
-        return $this->render('nav_tabs_widget', [
+        return $this->render($this->viewFilePath, [
             'items' => $this->items,
             'current' => $this->current,
         ]);
