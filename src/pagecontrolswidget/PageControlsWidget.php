@@ -17,7 +17,7 @@ class PageControlsWidget extends Widget
 
     public function run()
     {
-        return $this->render($viewFilePath, [
+        return $this->render($this->viewFilePath, [
             'items' => $this->items,
             'dropDownMode' => $this->dropDownMode,
         ]);
