@@ -13,7 +13,7 @@ class ModalFormWidget extends \wajox\yii2widgets\modalwidget\ModalWidget
     {
         parent::init();
 
-        if ($this->buttons == null) {
+        if ($this->buttons === null) {
             $this->buttons = [
                 [
                     'submit' => true,
