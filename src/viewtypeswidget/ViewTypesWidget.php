@@ -5,6 +5,7 @@ use yii\base\Widget;
 
 class ViewTypesWidget extends Widget
 {
+    public $viewFilePath = 'view_types_widget';
     public $items = [];
     public $current = '';
 
@@ -15,7 +16,7 @@ class ViewTypesWidget extends Widget
 
     public function run()
     {
-        return $this->render('view_types_widget', [
+        return $this->render($this->viewFilePath, [
             'items' => $this->items,
             'current' => $this->current,
         ]);

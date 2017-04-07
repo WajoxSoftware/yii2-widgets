@@ -5,9 +5,9 @@ use yii\base\Widget;
 
 class ModalWidget extends Widget
 {
-    const TEMPLATE_PATH = 'modal_widget';
     const DEFAULT_ID_PREFIX = 'modal-widget-';
 
+    public $viewFilePath = 'modal_widget';
     public $buttons = null;
     public $title = null;
     public $body = '';
@@ -28,7 +28,7 @@ class ModalWidget extends Widget
             $this->body = $this->render($this->render, $this->data);
         }
 
-        return $this->render(static::TEMPLATE_PATH, [
+        return $this->render($this->viewFilePath, [
             'id' => $this->id,
             'title' => $this->title,
             'body' => $this->body,

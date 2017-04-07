@@ -5,9 +5,9 @@ use yii\base\Widget;
 
 class CollapsibleWidget extends Widget
 {
-    const TEMPLATE_PATH = 'collapsible_widget';
     const DEFAULT_ID_PREFIX = 'collapsible-widget-';
 
+    public $viewFilePath = 'collapsible_widget';
     public $buttons = [];
     public $title = null;
     public $body = '';
@@ -32,7 +32,7 @@ class CollapsibleWidget extends Widget
             $this->body = $this->render($this->render, $this->data);
         }
 
-        return $this->render(static::TEMPLATE_PATH, [
+        return $this->render($this->viewFilePath, [
             'attributes' => $this->generateAttributesHtml(),
             'title' => $this->title,
             'body' => $this->body,

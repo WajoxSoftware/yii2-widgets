@@ -5,6 +5,7 @@ use yii\base\Widget;
 
 class FilterWidget extends Widget
 {
+    public $viewFilePath = 'filter_widget';
     public $body = null;
     public $model = null;
     public $items = [];
@@ -16,7 +17,7 @@ class FilterWidget extends Widget
 
     public function run()
     {
-        return $this->render('filter_widget', [
+        return $this->render($this->viewFilePath, [
             'body' => $this->body,
             'model' => $this->model,
             'items' => $this->items,

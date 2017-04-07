@@ -6,6 +6,7 @@ use yii\data\ActiveDataProvider;
 
 class ListWidget extends Widget
 {
+    public $viewFilePath = 'list_widget';
     public $layout;
     public $itemView;
     public $query = null;
@@ -26,7 +27,7 @@ class ListWidget extends Widget
             $this->dataProvider = new ActiveDataProvider($this->params);
         }
 
-        return $this->render('list_widget', [
+        return $this->render($this->viewFilePath, [
             'layout' => $this->layout,
             'itemView' => $this->itemView,
             'dataProvider' => $this->dataProvider,

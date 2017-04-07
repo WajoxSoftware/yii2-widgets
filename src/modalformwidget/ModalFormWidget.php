@@ -5,8 +5,9 @@ use yii\base\Widget;
 
 class ModalFormWidget extends \wajox\yii2widgets\modalwidget\ModalWidget
 {
-    const TEMPLATE_PATH = 'modal_form_widget';
     const DEFAULT_ID_PREFIX = 'modal-form-widget-';
+
+    public $viewFilePath = 'modal_form_widget';
 
     public function init()
     {
