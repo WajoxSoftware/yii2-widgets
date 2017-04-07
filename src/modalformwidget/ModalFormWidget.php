@@ -12,7 +12,7 @@ class ModalFormWidget extends \wajox\yii2widgets\modalwidget\ModalWidget
     {
         parent::init();
 
-        if (sizeof($this->buttons) > 0) {
+        if ($this->buttons == null) {
             return;
         }
 

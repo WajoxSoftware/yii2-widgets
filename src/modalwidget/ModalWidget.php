@@ -8,7 +8,7 @@ class ModalWidget extends Widget
     const TEMPLATE_PATH = 'modal_widget';
     const DEFAULT_ID_PREFIX = 'modal-widget-';
 
-    public $buttons = [];
+    public $buttons = null;
     public $title = null;
     public $body = '';
     public $render = null;
@@ -32,7 +32,7 @@ class ModalWidget extends Widget
             'id' => $this->id,
             'title' => $this->title,
             'body' => $this->body,
-            'buttons' => $this->buttons,
+            'buttons' => $this->buttons == null ? [] : $this->buttons,
         ]);
     }
 }
