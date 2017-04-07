@@ -14,13 +14,13 @@ class ModalFormWidget extends \wajox\yii2widgets\modalwidget\ModalWidget
         parent::init();
 
         if ($this->buttons == null) {
-            return;
+            $this->buttons = [
+                [
+                    'submit' => true,
+                    'title' => \Yii::t('app', 'Save'),
+                    'class' => 'btn-primary',
+                ],
+            ];
         }
-
-        $this->buttons[] = [
-            'submit' => true,
-            'title' => \Yii::t('app', 'Save'),
-            'class' => 'btn-primary',
-        ];
     }
 }
