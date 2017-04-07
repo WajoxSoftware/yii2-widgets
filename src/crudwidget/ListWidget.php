@@ -6,6 +6,7 @@ use yii\data\ActiveDataProvider;
 
 class ListWidget extends Widget
 {
+    public $layout;
     public $itemView;
     public $query = null;
     public $params = [];
@@ -26,6 +27,7 @@ class ListWidget extends Widget
         }
 
         return $this->render('list_widget', [
+            'layout' => $this->layout,
             'itemView' => $this->itemView,
             'dataProvider' => $this->dataProvider,
             'viewParams' => $this->viewParams,
