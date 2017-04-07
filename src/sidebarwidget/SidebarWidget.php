@@ -6,6 +6,7 @@ use yii\base\Widget;
 
 class SidebarWidget extends Widget
 {
+    public $viewFilePath = 'sidebar_widget';
     public $items = [];
     public $parts = [];
     public $title = '';
@@ -18,7 +19,7 @@ class SidebarWidget extends Widget
 
     public function run()
     {
-        return $this->render('sidebar_widget', [
+        return $this->render($this->viewFilePath, [
             'items' => $this->items,
             'parts' => $this->parts,
             'title' => $this->title,
